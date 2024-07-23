@@ -15,6 +15,7 @@ import { zodResolver } from "@hookform/resolvers/zod";
 import { Input } from "../ui/input";
 import { Textarea } from "../ui/textarea";
 import { Button } from "../ui/button";
+import { Loader, MessageCircle } from "lucide-react";
 
 const formSchema = z.object({
   name: z.string().min(1, { message: "Please Enter You name" }),
@@ -30,6 +31,7 @@ export default function ContactForm() {
       message: "",
     },
   });
+  const isLoading = form.formState.isLoading;
   return (
     <Form {...form}>
       <form className="flex flex-col gap-5 w-[600px]">
@@ -90,8 +92,18 @@ export default function ContactForm() {
             </FormItem>
           )}
         />
-        <Button className="bg-inverted">
-          <span>Send</span>
+        <Button className="bg-inverted gap-2.5">
+          {isLoading ? (
+            <>
+              <span>Sending...</span>
+              <Loader height={12} width={12} className="animate-spin" />
+            </>
+          ) : (
+            <>
+              <span>Send</span>
+              <MessageCircle height={12} width={14} />
+            </>
+          )}
         </Button>
       </form>
     </Form>
