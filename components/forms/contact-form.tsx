@@ -32,9 +32,18 @@ export default function ContactForm() {
     },
   });
   const isLoading = form.formState.isLoading;
+  async function onSubmit(values: z.infer<typeof formSchema>) {
+    // Do something with the form values.
+    // ✅ This will be type-safe and validated.
+    console.log(values);
+  }
+
   return (
     <Form {...form}>
-      <form className="flex flex-col gap-5 w-[600px]">
+      <form
+        className="flex flex-col gap-5 w-[600px]"
+        onSubmit={form.handleSubmit(onSubmit)}
+      >
         <FormField
           name="name"
           render={({ field }) => (
@@ -74,7 +83,7 @@ export default function ContactForm() {
           )}
         />
         <FormField
-          name="email"
+          name="message"
           render={({ field }) => (
             <FormItem className="space-y-1.5">
               <FormLabel className="font-medium text-dark text-xs">
@@ -83,7 +92,7 @@ export default function ContactForm() {
               <FormControl>
                 <Textarea
                   {...field}
-                  placeholder="message"
+                  placeholder="Message"
                   className="bg-[#FFF7ED] border border-[#FED7AA] rounded-none placeholder:text-inverted-dark"
                 />
               </FormControl>
