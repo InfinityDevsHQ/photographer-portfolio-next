@@ -5,7 +5,7 @@ export default function Services() {
   return (
     <section className="bg-dark-foreground text-dark p-12 flex flex-col items-center">
       <h2 className="text-2xl font-bold">What Can I do for you?</h2>
-      <div className="p-12 flex gap-12">
+      <div className="p-12 flex flex-col lg:flex-row gap-12">
         <ServiceCard
           icon={<Camera width={40} height={40} />}
           heading="Photo Shooting"
