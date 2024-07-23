@@ -1,18 +1,22 @@
 import { Button } from "@/components/ui/button";
 import { Check, ChevronRight } from "lucide-react";
-
-export default function PricingCard() {
-  const offers = ["OFFER 1", "OFFER 2", "OFFER 3"];
+type PricingCardProps = {
+  offerName: string;
+  price: number;
+  description: string;
+  offers: string[];
+};
+export default function PricingCard({
+  offerName,
+  price,
+  description,
+  offers,
+}: PricingCardProps) {
   return (
-    <article className="p-12 bg-inverted-light flex flex-col gap-5 text-dark">
-      <h4 className="text-lg font-bold">Minimum</h4>
-      <p className="text-inverted-dark font-bold text-2xl">$200</p>
-      <p className="text-xs xl:text-base text-dark-slate">
-        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nesciunt
-        quaerat illum cum? Unde perspiciatis accusantium eos ratione atque
-        tempore modi reprehenderit quas ex. Unde, eaque dolorem enim corrupti
-        hic alias.
-      </p>
+    <article className="p-12 bg-inverted-light flex flex-col gap-5 text-dark w-96">
+      <h4 className="text-lg font-bold">{offerName}</h4>
+      <p className="text-inverted-dark font-bold text-2xl">${price}</p>
+      <p className="text-xs xl:text-base text-dark-slate">{description}</p>
       <ol className="flex flex-col gap-5">
         {offers.map((offer, index) => (
           <li key={index} className="flex items-center gap-2.5">
