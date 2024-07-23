@@ -56,6 +56,7 @@ const config = {
           DEFAULT: "#020617",
           foreground: "#F8FAFC",
         },
+        inverted: "#F97316",
       },
       borderRadius: {
         lg: "var(--radius)",
