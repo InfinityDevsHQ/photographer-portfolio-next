@@ -1,7 +1,7 @@
-import { ReactNode } from "react";
+import { ReactElement, ReactNode } from "react";
 
 export type SocialMediaData = {
-  icon: ReactNode;
+  icon: ReactElement;
   href: string;
   linkName: string;
 };
