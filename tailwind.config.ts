@@ -55,8 +55,13 @@ const config = {
         dark: {
           DEFAULT: "#020617",
           foreground: "#F8FAFC",
+          slate: "#334155",
         },
-        inverted: "#F97316",
+        inverted: {
+          DEFAULT: "#F97316",
+          light: "#FFEDD5",
+          dark: "#7C2D12",
+        },
       },
       borderRadius: {
         lg: "var(--radius)",
