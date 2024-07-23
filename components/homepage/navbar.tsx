@@ -31,9 +31,22 @@ export default function Navbar() {
                 </Link>
               </li>
             ))}
+            <li>
+              <button
+                className="mt-5 md:mt-0"
+                type="button"
+                onClick={() => setIsOpen(!isOpen)}
+              >
+                {isOpen ? (
+                  <XIconsvg className="size-5" />
+                ) : (
+                  <Menusvg className="size-5" />
+                )}
+              </button>
+            </li>
           </ul>
           <button
-            className="mt-5 md:mt-0"
+            className="mt-5 md:mt-0 md:hidden"
             type="button"
             onClick={() => setIsOpen(!isOpen)}
           >
