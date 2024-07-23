@@ -2,7 +2,7 @@ import Hero from "@/components/homepage/hero";
 import Navbar from "@/components/homepage/navbar";
 import Pricing from "@/components/homepage/pricing";
 import Services from "@/components/homepage/services";
-import About from "@/components/svgs/about";
+import About from "@/components/homepage/about";
 
 export default function Home() {
   return (
