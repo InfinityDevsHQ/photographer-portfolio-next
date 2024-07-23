@@ -56,6 +56,7 @@ const config = {
           DEFAULT: "#020617",
           foreground: "#F8FAFC",
           slate: "#334155",
+          blue: "#F1F5F9",
         },
         inverted: {
           DEFAULT: "#F97316",
