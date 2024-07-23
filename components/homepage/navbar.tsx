@@ -9,7 +9,7 @@ import XIconsvg from "../svgs/logos/x-svg";
 const NavLinks = ["+92 123 456 1234", "Gallery"];
 
 export default function Navbar() {
-  const [isShow, setIsShow] = useState(false);
+  const [isOpen, setIsOpen] = useState(false);
   return (
     <header className="text-white p-4 max-w-7xl mx-auto ">
       <div className="mx-auto flex justify-between  items-center">
@@ -33,10 +33,11 @@ export default function Navbar() {
             ))}
           </ul>
           <button
-            className="mt-5 md:mt-0  md:hidden"
-            onClick={() => setIsShow(!isShow)}
+            className="mt-5 md:mt-0"
+            type="button"
+            onClick={() => setIsOpen(!isOpen)}
           >
-            {isShow ? (
+            {isOpen ? (
               <XIconsvg className="size-5" />
             ) : (
               <Menusvg className="size-5" />
@@ -45,7 +46,7 @@ export default function Navbar() {
         </nav>
       </div>
       {/* Mobile Nav */}
-      <div className={`w-full py-8   ${isShow ? "absolute" : "hidden"}`}>
+      <div className={`w-full py-8   ${isOpen ? "absolute" : "hidden"}`}>
         <ul className="flex flex-col pl-8 gap-4 justify-center">
           {["Home", "About", "Contact"].map((link, index) => (
             <li key={index}>
