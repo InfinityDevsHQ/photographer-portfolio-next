@@ -9,7 +9,7 @@ export default function Video() {
         width={1280}
         height={600}
         alt="Video Thumbnail"
-        className="w-full"
+        className="w-full h-full"
       />
       <button
         type="button"
