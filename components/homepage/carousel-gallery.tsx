@@ -1,10 +1,16 @@
 import Image from "next/image";
-import { Carousel, CarouselContent, CarouselItem } from "../ui/carousel";
+import {
+  Carousel,
+  CarouselContent,
+  CarouselItem,
+  CarouselNext,
+  CarouselPrevious,
+} from "../ui/carousel";
 
 export default function CarouselGallery() {
   return (
     <section>
-      <Carousel>
+      <Carousel className="relative">
         <CarouselContent className="gap-0">
           <CarouselItem className="basis-1/3 pl-0">
             <Image
@@ -34,6 +40,10 @@ export default function CarouselGallery() {
             />
           </CarouselItem>
         </CarouselContent>
+        <div className="absolute top-[50%] flex items-center justify-between w-full !px-12">
+          <CarouselPrevious className="relative !bg-white !opacity-20 h-10 w-10 p-2.5" />
+          <CarouselNext className="relative h-10 w-10" />
+        </div>
       </Carousel>
     </section>
   );
