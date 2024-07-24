@@ -5,6 +5,7 @@ import Services from "@/components/homepage/services";
 import About from "@/components/homepage/about";
 import ContactUs from "@/components/homepage/contact-us";
 import Video from "@/components/homepage/videro";
+import CarouselGallery from "@/components/homepage/carousel-gallery";
 
 export default function Home() {
   return (
@@ -15,6 +16,7 @@ export default function Home() {
         <Hero />
       </div>
       <Services />
+      <CarouselGallery />
       <Pricing />
       <About />
       <Video />
