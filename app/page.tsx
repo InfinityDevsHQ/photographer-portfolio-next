@@ -10,8 +10,8 @@ import CarouselGallery from "@/components/homepage/carousel-gallery";
 export default function Home() {
   return (
     <>
-      <div className="relative bg-[url('/hero-img.jpeg')] text-white bg-cover bg-left md:bg-center xl:bg-cover bg-no-repeat min-h-[600px]">
-        <div className="absolute inset-0 -z-10 bg-black opacity-50"></div>
+      <div className="relative bg-[url('/hero-img.jpeg')] text-white -z-20 bg-cover bg-left md:bg-center xl:bg-cover bg-no-repeat min-h-[600px]">
+        <div className="absolute inset-0 -z-10 bg-black opacity-40"></div>
         <Navbar />
         <Hero />
       </div>
