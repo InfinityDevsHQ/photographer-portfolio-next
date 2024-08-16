@@ -3,12 +3,12 @@ import PricingCard from "./pricing/pricing-card";
 export default function Pricing() {
   return (
     <section className="flex flex-col items-center p-12 bg-dark-foreground">
-      <h2 className="text-2xl font-bold">What Can I do for you?</h2>
-      <div className="p-12 flex flex-col flex-wrap justify-center lg:flex-row gap-12">
+      <h2 className="text-2xl font-bold">Pricing</h2>
+      <div className="p-6 md:p-12 flex flex-col flex-wrap justify-center lg:flex-row gap-4 sm:gap-8 md:gap-12">
         <PricingCard
           offerName="Minimum"
           price={200}
-          description="Lorem, ipsum dolor sit amet consectetur adipisicing elit. Voluptates temporibus, animi eligendi culpa laudantium error  earum vitae! Eos error esse nisi."
+          description="Lorem, ipsum dolor sit amet consectetur adipisicing elit. Voluptates temporibus, animi eligendi culpa laudantium."
           offers={["2 Hours Shoot", "50 Photos", "3 Revisions", "Free REtouch"]}
         />
         <PricingCard

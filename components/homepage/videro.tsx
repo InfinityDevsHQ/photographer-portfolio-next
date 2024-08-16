@@ -3,7 +3,7 @@ import PlaySvg from "../svgs/icons/play-svg";
 
 export default function Video() {
   return (
-    <section className="relative">
+    <section className="relative md:h-[600px]">
       <Image
         src={"/assets/video-thumbnail.png"}
         width={1280}
